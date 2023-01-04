@@ -1,7 +1,9 @@
 class IndividualController {
 
     async project(req, res){
-        res.render('individual/project.hbs')
+        res.render("individual/project", {
+            title: "Проекты"
+        });
     }
 }
 
