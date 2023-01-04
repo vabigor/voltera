@@ -6,6 +6,7 @@ const sequelize = require('./db')
 const models = require('./models/models')
 const cors = require('cors')
 const router = require('./routes/index')
+const path = require("path");
 
 const PORT = process.env.PORT || 5000
 
@@ -22,6 +23,8 @@ app.set("view engine", "hbs");
 app.use(cors())
 app.use(express.json())
 app.use('/', router)
+
+app.use(express.static(path.join(__dirname, 'static')))
 
 const start = async () => {
     try {
