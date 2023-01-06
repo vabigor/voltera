@@ -11,14 +11,14 @@
 }
 .light{
     position: absolute;
-    background-color: rgb(248,248,248);
+    /*background-color: rgb(248,248,248);*/
     /*height: 50px;*/
     /*width: 50px;*/
     z-index: 1;
     right: 365px;
     top: 320px;
-    border-radius: 50%;
     box-shadow: -15px 20px 7em 9.5em rgb(255,255,255);
+    border-radius: 50%;
     animation: lights 3s ease-in-out infinite;
     display: none;
 }
