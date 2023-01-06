@@ -5,6 +5,12 @@ class EntityController {
             title: "Проекты"
         });
     }
+
+    async certificates(req, res){
+        res.render("certificates.hbs", {
+            title: "Сертификаты"
+        });
+    }
 }
 
 module.exports = new EntityController()

@@ -38,12 +38,20 @@ Handlebars.registerHelper("inc", function(value) {
     let x = value;
     return parseInt(x) + 1;
 });
+Handlebars.registerHelper("url", function(value) {
+    if (value[0]==="/"){
+        value.slice(1,1)
+    }
+    return process.env.URL+":"+process.env.PORT+"/"+value
+});
 // app.set("views", "contact"); // установка пути к представлениям
 app.use(cors())
 app.use(express.json())
 app.use('/', router)
 
 app.use(express.static(path.join(__dirname, 'static')))
+// app.use(express.json())
+// app.use(express.static(path.resolve(__dirname, 'static')))
 
 const start = async () => {
     try {

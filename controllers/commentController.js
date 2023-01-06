@@ -6,7 +6,8 @@ class CommentController {
         let {page} = req.params
         return await Comment.findAndCountAll({
             limit: 5,
-            offset: page
+            offset: page,
+            order: [['createdAt', 'DESC']]
         }).then(result=>{
             return res.json(result)
         })
