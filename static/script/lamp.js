@@ -4,9 +4,9 @@ let light = null;
 let filament = null;
 
 function lampEffect(){
-    // lightExecuteOff();
-    // filamentExecuteOn();
-    lightExecuteOn(50000)
+    lightExecuteOff();
+    filamentExecuteOn();
+    // lightExecuteOn(50000)
 }
 
 function filamentExecuteOn() {
