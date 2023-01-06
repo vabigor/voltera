@@ -1,0 +1,60 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <div id="cer1" class="card cursor-pointer" style="width: 18rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                 onclick="modalCertificateChoose('cer1.jpg', 'Аттестат соответствия')">
+                <img class="certificate-hover" src="{{#url "certificates/cer1.jpg"}}{{/url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card cursor-pointer" style="width: 18rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                 onclick="modalCertificateChoose('cer2.jpg', 'аыаыавы')">
+                <img class="certificate-hover" src="{{#url "certificates/cer2.jpg"}}{{/url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card cursor-pointer" style="width: 18rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                 onclick="modalCertificateChoose('cer3.jpg', 'фываф')">
+                <img class="certificate-hover" src="{{#url "certificates/cer3.jpg"}}{{/url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card cursor-pointer" style="width: 18rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                 onclick="modalCertificateChoose('cer4.jpg', 'фыавы')">
+                <img class="certificate-hover" src="{{#url "certificates/cer4.jpg"}}{{/url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div id="modalTitle">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="modalContent" class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>

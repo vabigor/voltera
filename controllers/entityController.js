@@ -7,7 +7,7 @@ class EntityController {
     }
 
     async certificates(req, res){
-        res.render("certificates.hbs", {
+        res.render("entity/certificates.hbs", {
             title: "Сертификаты"
         });
     }

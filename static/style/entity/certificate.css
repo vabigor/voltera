@@ -1,0 +1,14 @@
+.certificate-hover:hover{
+    animation: certificate-rotation 0.9s infinite;
+}
+
+@keyframes certificate-rotation {
+    0%   {transform: rotate(0deg)}
+    12%  {transform: rotate(-2.5deg)}
+    24%  {transform: rotate(-5deg)}
+    36%  {transform: rotate(-2.5deg)}
+    48%  {transform: rotate(-0deg)}
+    60%  {transform: rotate(2.5deg)}
+    72%  {transform: rotate(5deg)}
+    84% {transform: rotate(2.5deg)}
+}

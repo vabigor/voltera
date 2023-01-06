@@ -10,11 +10,17 @@ function lampEffect(){
 }
 
 function filamentExecuteOn() {
+    if (filament===null){
+        return;
+    }
     filament.style.display = "block"
     setTimeout(filamentExecuteOff, 10)
 }
 
 function filamentExecuteOff(){
+    if (filament===null){
+        return;
+    }
     filament.style.display = "none"
     filamentCount++;
     switch (filamentCount){
@@ -35,11 +41,17 @@ function filamentExecuteOff(){
 }
 
 function lightExecuteOn(timeOut) {
+    if (light===null) {
+        return
+    }
     light.style.display = "block";
     setTimeout(lampEffect, timeOut);
 }
 
 function lightExecuteOff() {
+    if (light===null){
+        return
+    }
     light.style.display = "none";
 }
 
