@@ -7,6 +7,7 @@ const models = require('./models/models')
 const cors = require('cors')
 const router = require('./routes/index')
 const path = require("path");
+const Handlebars = require("handlebars");
 
 const PORT = process.env.PORT || 5000
 
@@ -20,6 +21,7 @@ app.engine("hbs", expressHbs.engine(
     }
 ))
 app.set("view engine", "hbs");
+// app.set("views", "contact"); // установка пути к представлениям
 app.use(cors())
 app.use(express.json())
 app.use('/', router)

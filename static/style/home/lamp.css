@@ -18,7 +18,7 @@
     right: 365px;
     top: 320px;
     box-shadow: -15px 20px 7em 9.5em rgb(255,255,255);
-    border-radius: 50%;
+    border-radius: 100%;
     animation: lights 3s ease-in-out infinite;
     display: none;
 }
