@@ -76,7 +76,7 @@
             <h5 class="card-header">Отзывы</h5>
             <div class="card-body">
                 <div id="allComment">
-                    {{#each emails}}
+                    {{#each comments}}
                         <div style="border: 1px solid gray; border-radius: 8px;box-shadow: 2px 2px 2px 2px rgb(200,200,200); margin-bottom: 10px">
                             <div style="border-bottom: 1px solid silver; border-radius: 8px 8px 0 0; padding-left: 5px; background-color: rgb(248,248,248)">
                                 <h3>{{this.dataValues.name}}</h3>
@@ -88,25 +88,22 @@
                                 {{this.dataValues.updatedAt}}
                             </div>
                         </div>
+
                     {{/each}}
                 </div>
 
                 <div id="selfComment"></div>
 
-                <div>
+                <div style="display: flex;justify-content: center;">
                     <nav class="mt-3">
                         <ul class="pagination">
-                            <li class="page-item disabled">
-                                <button class="page-link"> < </button>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item active" aria-current="page">
-                                <span class="page-link">2</span>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <button class="page-link"> > </button>
-                            </li>
+                            {{#times countPage}}
+                                {{#ifCond this 0}}
+                                    <li class="page-item" aria-current="page"><button class="page-link active" onclick="getComments(this, 0)">1</button></li>
+                                {{else}}
+                                    <li class="page-item"><button class="page-link" onclick="getComments(this, {{this}})">{{#inc this}}{{/inc}}</button></li>
+                                {{/ifCond}}
+                            {{/times}}
                         </ul>
                     </nav>
                 </div>
@@ -128,9 +125,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
     </div>

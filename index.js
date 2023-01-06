@@ -21,6 +21,23 @@ app.engine("hbs", expressHbs.engine(
     }
 ))
 app.set("view engine", "hbs");
+
+Handlebars.registerHelper('times', function(n, block) {
+    let accum = '';
+    for(let i = 0; i < n; i++)
+        accum += block.fn(i);
+    return accum;
+});
+Handlebars.registerHelper('ifCond', function(v1, v2, options) {
+    if(v1 === v2) {
+        return options.fn(this);
+    }
+    return options.inverse(this);
+});
+Handlebars.registerHelper("inc", function(value) {
+    let x = value;
+    return parseInt(x) + 1;
+});
 // app.set("views", "contact"); // установка пути к представлениям
 app.use(cors())
 app.use(express.json())

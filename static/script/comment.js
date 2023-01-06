@@ -8,27 +8,40 @@ async function sendComment(){
         comment.name=commentName.value;
         comment.text=commentText.value;
         let result = await axios.post(`http://127.0.0.1:5000/comment`, comment).then(r=>{
-            console.log(r.data)
             let parent = document.getElementById("selfComment");
-            let html =
-                `<div style="border: 1px solid gray; border-radius: 8px;box-shadow: 2px 2px 2px 2px rgb(200,200,200)">
-                    <div style="border-bottom: 1px solid silver; border-radius: 8px 8px 0 0; padding-left: 5px; background-color: rgb(248,248,248)">
-                        <h3>${r.data.name}</h3>
-                    </div>
-                    <div style="padding-left: 5px">
-                        <p>${r.data.text}</p>
-                    </div>
-                    <div style="border-top: 1px solid silver; padding-left: 5px; border-radius: 0 0 8px 8px; background-color: rgb(248,248,248)">
-                        ${r.data.updatedAt}
-                    </div>
-                </div>`
-            parent.innerHTML =(html)
+            parent.innerHTML = createElemComment(r.data);
             commentText.value = "";
             commentName.value = "";
         });
     }
 }
 
-// document.addEventListener('DOMContentLoaded', getComment, false);
+async function getComments(elem, page){
+    let comments = await axios.get(`http://127.0.0.1:5000/comment/`+page).then(result=>{
+        let html = "";
+        result.data.rows.forEach(r=>{
+            html += createElemComment(r);
+        })
+        let parent = document.getElementById("allComment");
+        parent.innerHTML = html;
+    })
+    let pageItems = document.getElementsByClassName("page-link");
+    for (let pageItem of pageItems) {
+        pageItem.classList.remove("active")
+    }
+    elem.classList.add("active")
+}
 
-// document.addEventListener('DOMContentLoaded', init, false);
+function createElemComment(data){
+    return `<div style="border: 1px solid gray; border-radius: 8px;box-shadow: 2px 2px 2px 2px rgb(200,200,200); margin-bottom: 10px">
+                <div style="border-bottom: 1px solid silver; border-radius: 8px 8px 0 0; padding-left: 5px; background-color: rgb(248,248,248)">
+                    <h3>${data.name}</h3>
+                </div>
+                <div style="padding-left: 5px">
+                    <p>${data.text}</p>
+                </div>
+                <div style="border-top: 1px solid silver; padding-left: 5px; border-radius: 0 0 8px 8px; background-color: rgb(248,248,248)">
+                    ${data.updatedAt}
+                </div>
+            </div>`
+}
