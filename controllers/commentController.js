@@ -9,6 +9,9 @@ class CommentController {
             offset: page,
             order: [['createdAt', 'DESC']]
         }).then(result=>{
+            result.rows.forEach(r=>{
+                r.dataValues.updatedAt = r.dataValues.updatedAt.toLocaleDateString()+' '+r.dataValues.updatedAt.toLocaleTimeString();
+            })
             return res.json(result)
         })
     }

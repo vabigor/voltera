@@ -1,13 +1,11 @@
 async function sendComment(){
     let commentText = document.getElementById("comment");
     let commentName = document.getElementById("commentName");
-    if (commentText==null || commentText==="" || commentName==null || commentName===""){
-
-    }else{
-        let comment={};
-        comment.name=commentName.value;
-        comment.text=commentText.value;
-        let result = await axios.post(`${env.URL+":"+env.PORT}/comment`, comment).then(r=>{
+    if (commentText.value!=null && commentText.value!=="" && commentName.value!=null && commentName.value!=="") {
+        let comment = {};
+        comment.name = commentName.value;
+        comment.text = commentText.value;
+        let result = await axios.post(`${env.URL + ":" + env.PORT}/comment`, comment).then(r => {
             let parent = document.getElementById("selfComment");
             parent.innerHTML = createElemComment(r.data);
             commentText.value = "";
@@ -30,18 +28,25 @@ async function getComments(elem, page){
         pageItem.classList.remove("active")
     }
     elem.classList.add("active")
+
+    let selfComment = document.getElementById("selfComment");
+    selfComment.innerHTML = ""
 }
 
 function createElemComment(data){
-    return `<div style="border: 1px solid gray; border-radius: 8px;box-shadow: 2px 2px 2px 2px rgb(200,200,200); margin-bottom: 10px">
-                <div style="border-bottom: 1px solid silver; border-radius: 8px 8px 0 0; padding-left: 5px; background-color: rgb(248,248,248)">
-                    <h3>${data.name}</h3>
-                </div>
-                <div style="padding-left: 5px">
-                    <p>${data.text}</p>
-                </div>
-                <div style="border-top: 1px solid silver; padding-left: 5px; border-radius: 0 0 8px 8px; background-color: rgb(248,248,248)">
-                    ${data.updatedAt}
+    return `<div class="card mb-2">
+                <div class="row g-0">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">${data.name}</h5>
+                            <p class="card-text">${data.text}</p>
+                            <p class="card-text"><small class="text-muted">${data.updatedAt}</small></p>
+                        </div>
+                    </div>
                 </div>
             </div>`
 }
+
+
+
+
