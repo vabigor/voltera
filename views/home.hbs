@@ -1,4 +1,4 @@
-<img class="lamp" src={{#url "lamp.svg"}}{{/url}}>
+<img class="lamp" src={{#url "home/lamp.svg"}}{{/url}}>
 <div class="light" id="light"></div>
 <div class="filament" id="filament"></div>
 
@@ -35,31 +35,31 @@
     </button>
 </div>
 
-<div style="background-color: rgb(253,226,211); height: 60px; box-shadow: 0 0 10px rgba(0,0,0,0.5);"></div>
+<div class="bran-color home-line"></div>
 <div class="mt-4">
     <div class="row ">
         <div class="col text-center">
-            <img src={{#url "home/specialists.png"}}{{/url}}>
+            <img src={{#url "home/specialists.png"}}{{/url}} alt="...">
             <span>Качество выполняемых работ</span>
         </div>
         <div class="col text-center">
-            <img src={{#url "home/experience.png"}}{{/url}}>
+            <img src={{#url "home/experience.png"}}{{/url}} alt="...">
             <span>Более 10 лет опыта</span>
         </div>
         <div class="col text-center">
-            <img src={{#url "home/arrival.png"}}{{/url}}>
+            <img src={{#url "home/arrival.png"}}{{/url}} alt="...">
             <span>Своевременное прибытие на объект</span>
         </div>
         <div class="col text-center">
-            <img src={{#url "home/quality.png"}}{{/url}}>
+            <img src={{#url "home/quality.png"}}{{/url}} alt="...">
             <span>Квалифицированные специалисты</span>
         </div>
     </div>
 </div>
 
 
-<div style="background-color: rgb(200, 200, 200, 0.2)">
-    <div style="border-radius: 100% 0 100% 0; border: solid 5px gray; height: 1px; box-shadow: 10px 10px 10px 0 rgba(0,0,0,0.5); margin-top: 20px"></div>
+<div>
+    <div class="line-1"></div>
     <div class="container pt-2 pb-2">
         <h2><kbd>О НАС</kbd></h2>
     </div>
@@ -73,7 +73,7 @@
         <p class="card-text">Всегда предоставляем расчёт стоимости или смету (для юридических лиц). Обладаем всеми необходимыми документами для заключения договоров и участии в тендерах либо переговорах.</p>
     </div>
 
-    <div style="border-radius: 100% 0 100% 0; border: solid 1px gray; height: 10px; box-shadow: 10px 10px 10px 0 rgba(0,0,0,0.5); margin-top: 10px"></div>
+    <div class="line-2"></div>
     <div class="container pt-2 pb-2">
         <h2><kbd>ГДЕ РАБОТАЕМ</kbd></h2>
     </div>
@@ -83,7 +83,7 @@
         <p class="card-text">Знакомы с инфраструктурой и надзорными органами этих городов. Часто являемся представителями при сдаче объекта в эксплуатацию.</p>
     </div>
 
-    <div style="border-radius: 100% 100% 0 100%; border: solid 1px gray; height: 4px; box-shadow: 10px 10px 10px 0 rgba(0,0,0,0.5); margin-top: 10px"></div>
+    <div class="line-3"></div>
     <div class="container pt-2 pb-2">
         <h2><kbd>НАШИ КЛИЕНТЫ</kbd></h2>
     </div>
@@ -93,13 +93,13 @@
         <p class="card-text">Знакомы с инфраструктурой и надзорными органами этих городов. Часто являемся представителями при сдаче объекта в эксплуатацию.</p>
     </div>
 
-    <div style="border-radius: 100% 0 0 100%; border: solid 5px gray; height: 1px; box-shadow: 10px 10px 10px 0 rgba(0,0,0,0.5); margin-top: 30px"></div>
+    <div class="line-4"></div>
     <div class="container pt-2 pb-3" id="commentBlock">
         <div class="row">
             <div class="col">
                 <h2><kbd>ОТЗЫВЫ</kbd></h2>
             </div>
-            <div class="col" style="text-align: right">
+            <div class="col text-align-right">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Оставить отзыв</button>
             </div>
         </div>
@@ -124,7 +124,7 @@
 
             <div id="selfComment"></div>
 
-            <div style="display: flex;justify-content: center;">
+            <div class="text-justify-center">
                 <nav class="mt-3">
                     <ul class="pagination">
                         {{#times countPage}}
@@ -151,18 +151,18 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div id="modalContent" class="modal-body">
-                <label for="commentName" class="form-label" style="color: gray">Ваше имя:<span style="color: red"> *</span></label>
+                <label class="form-label color-gary"  for="commentName">Ваше имя:<span class="color-red"> *</span></label>
                 <input type="text" class="form-control" id="commentName">
-                <label for="commentPost" class="form-label" style="color: gray">Должность:</label>
+                <label class="form-label color-gary" for="commentPost">Должность:</label>
                 <input type="text" class="form-control" id="commentPost">
-                <label for="commentCompany" class="form-label" style="color: gray">Компания</label>
+                <label class="form-label color-gary" for="commentCompany">Компания</label>
                 <input type="text" class="form-control" id="commentPhone">
-                <label for="comment" class="form-label" style="color: gray">Отзыв:<span style="color: red"> *</span></label>
+                <label class="form-label color-gary" for="comment">Отзыв:<span class="color-red"> *</span></label>
                 <textarea id="comment" rows="5" class="form-control" aria-label="With textarea"></textarea>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                <button type="button" class="btn btn-success" onclick="sendComment()">Отправить</button>
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal" onclick="sendComment()">Отправить</button>
             </div>
         </div>
     </div>

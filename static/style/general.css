@@ -1,3 +1,64 @@
 .cursor-pointer{
     cursor: pointer;
 }
+
+.mt--15{
+    margin-top: -15px;
+}
+
+.a-custom{
+    text-decoration: none;
+}
+
+.color-gary{
+    color: gray;
+}
+
+.text-align-left{
+    text-align: left;
+}
+
+.mt-8{
+    margin-top: 8px;
+}
+
+.z-index-1{
+    z-index: 1;
+}
+
+.z-index-2{
+    z-index: 2;
+}
+
+.z-index-3{
+    z-index: 3;
+}
+
+.custom-gray{
+    background-color: rgb(244,244,244);
+}
+
+.mb-8{
+    margin-bottom: 8px;
+}
+
+.mt-5{
+    margin-top: 5px;
+}
+
+.bran-color{
+    background-color: rgb(244,217,202);
+}
+
+.text-align-right{
+    text-align: right;
+}
+
+.text-justify-center{
+    display: flex;
+    justify-content: center;
+}
+
+.color-red{
+    color: red;
+}

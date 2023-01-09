@@ -12,3 +12,7 @@
     72%  {transform: rotate(5deg)}
     84% {transform: rotate(2.5deg)}
 }
+
+.certificates-card{
+    width: 18rem;
+}

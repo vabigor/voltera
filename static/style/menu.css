@@ -3,8 +3,7 @@
     font-weight:600;
 }
 
-.navbar {
-    background-color: rgb(243,110,33, 0.2);
+.menu{
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     padding: 10px;
 }

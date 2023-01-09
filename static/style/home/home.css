@@ -1,0 +1,19 @@
+.home-line{
+    height: 60px; box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.line-1{
+    border-radius: 100% 0 100% 0; border: solid 5px gray; height: 1px; box-shadow: 10px 10px 10px 0 rgba(0,0,0,0.5); margin-top: 20px
+}
+
+.line-2{
+    border-radius: 100% 0 100% 0; border: solid 1px gray; height: 10px; box-shadow: 10px 10px 10px 0 rgba(0,0,0,0.5); margin-top: 10px
+}
+
+.line-3{
+    border-radius: 100% 100% 0 100%; border: solid 1px gray; height: 4px; box-shadow: 10px 10px 10px 0 rgba(0,0,0,0.5); margin-top: 10px
+}
+
+.line-4{
+    border-radius: 100% 0 0 100%; border: solid 5px gray; height: 1px; box-shadow: 10px 10px 10px 0 rgba(0,0,0,0.5); margin-top: 30px
+}
