@@ -19,6 +19,7 @@ class CommentController {
     async create(req, res){
         const body = req.body
         const comment = await Comment.create(body)
+
         return res.json(comment)
     }
 }

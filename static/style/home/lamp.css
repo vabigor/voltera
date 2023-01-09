@@ -5,18 +5,15 @@
     width: 48px;
     z-index: 1;
     right: 348px;
-    top: 332px;
+    top: 342px;
     box-shadow: 1px 5px 25px 10px orange;
     display: none;
 }
 .light{
     position: absolute;
-    /*background-color: rgb(248,248,248);*/
-    /*height: 50px;*/
-    /*width: 50px;*/
-    z-index: 1;
+    z-index: 2;
     right: 365px;
-    top: 320px;
+    top: 330px;
     box-shadow: -15px 20px 7em 9.5em rgb(255,255,255);
     border-radius: 100%;
     animation: lights 3s ease-in-out infinite;
@@ -25,8 +22,8 @@
 .lamp{
     position: absolute;
     right: 280px;
-    top: -10px;
-    z-index: 1;
+    top: 0;
+    z-index: 2;
     transform: rotate(180deg);
 }
 
@@ -37,4 +34,35 @@
     65%  {box-shadow: -15px 20px 7em 7em rgb(255,255,255);}
     75% {box-shadow: -15px 20px 7em 9.5em rgb(255,255,255);}
     100% {box-shadow: -15px 20px 7em 9.5em rgb(255,255,255);}
+}
+
+@media (max-width: 1400px) {
+    .filament{
+        background-color: orange;
+        position: absolute;
+        height: 1px;
+        width: 48px;
+        z-index: 1;
+        right: 148px;
+        top: 342px;
+        box-shadow: 1px 5px 25px 10px orange;
+        display: none;
+    }
+    .light{
+        position: absolute;
+        z-index: 2;
+        right: 160px;
+        top: 330px;
+        box-shadow: -15px 20px 7em 9.5em rgb(255,255,255);
+        border-radius: 100%;
+        animation: lights 3s ease-in-out infinite;
+        display: none;
+    }
+    .lamp{
+        position: absolute;
+        right: 80px;
+        top: 0;
+        z-index: 2;
+        transform: rotate(180deg);
+    }
 }

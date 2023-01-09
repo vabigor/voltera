@@ -3,7 +3,7 @@
         <a class="navbar-brand" href="/">
 <!--            <img width="160" height="45" src="logo/logo.png"/>-->
 <!--            <img width="300" height="100" src="logo/logo.png" style="-webkit-filter: drop-shadow(20px 30px 5px #000);"/>-->
-            <img style="position: absolute; top: -20px; z-index: 999999;" width="300" height="100" src={{#url "logo/logo.png"}}{{/url}} alt="..."/>
+            <img class="logo" src={{#url "logo/logo.png"}}{{/url}} alt="..."/>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -15,15 +15,17 @@
                         ЮРИДИЧЕСКИМ ЛИЦАМ
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Проекты</a></li>
+                        <li><a class="dropdown-item" href="#">Проектирование</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Электрофизические измерения</a></li>
+                        <li><a class="dropdown-item" href="#">Составление смет</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Электромонтажные работы любой сложности </a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Электрофизические измерения (ЭФИ)</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Оперативно-техническое обслуживание</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Предоставление документов в ЭСО</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Подключение электро услуг, к сети электро снабжения</a></li>
+                        <li><a class="dropdown-item" href="#">Послегарантийное обслуживание и текущий ремонт электроустановок</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href={{#url "entity/certificates"}}{{/url}}>Сертификаты, свидетельства</a></li>
                     </ul>
@@ -33,13 +35,13 @@
                         ФИЗИЧЕСКИМ ЛИЦАМ
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Проекты</a></li>
+                        <li><a class="dropdown-item" href="#">Проектирование</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Электрофизические измерения</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Аварийно технические работы</a></li>
+                        <li><a class="dropdown-item" href="#">Аварийно-технические работы</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Электро монтаж (квартиры, коттеджи)</a></li>
+                        <li><a class="dropdown-item" href="#">Электромонтаж (квартиры, коттеджи)</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Подключение жилых домов к сети электро снабжения</a></li>
                         <li><hr class="dropdown-divider"></li>
@@ -47,10 +49,10 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/">КОНТАКТЫ</a>
+                    <a class="nav-link" href="/">НАШИ ОБЪЕКТЫ</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/">ОТЗЫВЫ</a>
+                <li class="nav-item" style="z-index: 3">
+                    <a class="nav-link" href="#commentBlock">ОТЗЫВЫ</a>
                 </li>
             </ul>
         </div>

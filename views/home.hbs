@@ -9,8 +9,6 @@
             <div class="carousel-caption d-none d-md-block">
                 <h1><kbd>ПОЗАБОТЬТЕСЬ О СВОИХ ЛЮБИМЫХ,</kbd></h1>
                 <h1><kbd>А ОБ ОСВЕЩЕНИИ ПОЗАБОТИМСЯ МЫ</kbd></h1>
-                <!--                <h5 style="color: rgb(243,110,33); text-shadow: 1px 1px 1px #000;">ПОЗАБОТЬТЕСЬ О СВОИХ ЛЮБИМЫХ, </h5>-->
-                <!--                <h5 style="color: rgb(243,110,33); text-shadow: 1px 1px 1px #000;">А ОБ ОСВЕЩЕНИИ ПОЗАБОТИМСЯ МЫ</h5>-->
                 <p></p>
             </div>
         </div>
@@ -61,7 +59,7 @@
 
 
 <div style="background-color: rgb(200, 200, 200, 0.2)">
-    <div style="border-radius: 100% 0 100% 0; border: solid 5px gray; height: 1px; box-shadow: 10px 10px 10px 0 rgba(0,0,0,0.5); margin-top: 15px"></div>
+    <div style="border-radius: 100% 0 100% 0; border: solid 5px gray; height: 1px; box-shadow: 10px 10px 10px 0 rgba(0,0,0,0.5); margin-top: 20px"></div>
     <div class="container pt-2 pb-2">
         <h2><kbd>О НАС</kbd></h2>
     </div>
@@ -96,7 +94,7 @@
     </div>
 
     <div style="border-radius: 100% 0 0 100%; border: solid 5px gray; height: 1px; box-shadow: 10px 10px 10px 0 rgba(0,0,0,0.5); margin-top: 30px"></div>
-    <div class="container pt-2 pb-3">
+    <div class="container pt-2 pb-3" id="commentBlock">
         <div class="row">
             <div class="col">
                 <h2><kbd>ОТЗЫВЫ</kbd></h2>
@@ -122,21 +120,6 @@
                     </div>
                 </div>
                 {{/each}}
-
-<!--                {{#each comments}}-->
-<!--                    <div style="border: 1px solid gray; border-radius: 8px;box-shadow: 2px 2px 2px 2px rgb(200,200,200); margin-bottom: 10px">-->
-<!--                        <div style="border-radius: 8px 8px 0 0; padding-left: 5px; background-color: rgb(248,248,248)">-->
-<!--                            <h5 style="color: green">{{this.dataValues.name}}</h5>-->
-<!--                        </div>-->
-<!--                        <div style="padding-left: 5px">-->
-<!--                            <p>{{this.dataValues.text}}</p>-->
-<!--                        </div>-->
-<!--                        <div style="padding-left: 5px; border-radius: 0 0 8px 8px; background-color: rgb(248,248,248)">-->
-<!--                            {{this.dataValues.updatedAt}}-->
-<!--                        </div>-->
-<!--                    </div>-->
-
-<!--                {{/each}}-->
             </div>
 
             <div id="selfComment"></div>
@@ -154,24 +137,6 @@
                     </ul>
                 </nav>
             </div>
-
-
-<!--            <div class="card mt-2">-->
-<!--                <div class="card-header">-->
-<!--                    Ваш отзыв-->
-<!--                </div>-->
-<!--                <div class="card-body">-->
-<!--                    <div class="input-group">-->
-<!--                        <textarea id="comment" rows="5" class="form-control" aria-label="With textarea"></textarea>-->
-<!--                    </div>-->
-<!--                    <div class="col-4 pt-2">-->
-<!--                        <div class="input-group">-->
-<!--                            <input type="text" id="commentName" class="form-control" placeholder="Имя" aria-label="Имя" aria-describedby="button-addon2">-->
-<!--                            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="sendComment()">Отправить</button>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
         </div>
     </div>
 </div>
@@ -187,13 +152,11 @@
             </div>
             <div id="modalContent" class="modal-body">
                 <label for="commentName" class="form-label" style="color: gray">Ваше имя:<span style="color: red"> *</span></label>
-                <input type="email" class="form-control" id="commentName">
+                <input type="text" class="form-control" id="commentName">
                 <label for="commentPost" class="form-label" style="color: gray">Должность:</label>
-                <input type="email" class="form-control" id="commentPost">
-                <label for="commentPhone" class="form-label" style="color: gray">Телефон:<span style="color: red"> *</span></label>
-                <input type="email" class="form-control" id="commentPhone">
-                <label for="commentEmail" class="form-label" style="color: gray">E-mail:</label>
-                <input type="email" class="form-control" id="commentEmail">
+                <input type="text" class="form-control" id="commentPost">
+                <label for="commentCompany" class="form-label" style="color: gray">Компания</label>
+                <input type="text" class="form-control" id="commentPhone">
                 <label for="comment" class="form-label" style="color: gray">Отзыв:<span style="color: red"> *</span></label>
                 <textarea id="comment" rows="5" class="form-control" aria-label="With textarea"></textarea>
             </div>
