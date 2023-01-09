@@ -1,15 +1,21 @@
 async function sendComment(){
     let commentText = document.getElementById("comment");
     let commentName = document.getElementById("commentName");
+    let commentPost = document.getElementById("commentPost");
+    let commentCompany = document.getElementById("commentCompany");
     if (commentText.value!=null && commentText.value!=="" && commentName.value!=null && commentName.value!=="") {
         let comment = {};
         comment.name = commentName.value;
+        comment.post = commentPost.value;
+        comment.company = commentCompany.value;
         comment.text = commentText.value;
         let result = await axios.post(`${env.URL + ":" + env.PORT}/comment`, comment).then(r => {
             let parent = document.getElementById("selfComment");
             parent.innerHTML = createElemComment(r.data);
             commentText.value = "";
             commentName.value = "";
+            commentPost.value = "";
+            commentCompany.value = "";
         });
     }
 }
@@ -38,7 +44,7 @@ function createElemComment(data){
                 <div class="row g-0">
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">${data.name}</h5>
+                            <h5 class="card-title">${data.full}</h5>
                             <p class="card-text">${data.text}</p>
                             <p class="card-text"><small class="text-muted">${data.updatedAt}</small></p>
                         </div>

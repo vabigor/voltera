@@ -1,11 +1,11 @@
 .filament{
     background-color: orange;
     position: absolute;
-    height: 1px;
+    height: 2px;
     width: 48px;
     z-index: 1;
     right: 348px;
-    top: 342px;
+    top: 341px;
     box-shadow: 1px 5px 25px 10px orange;
     display: none;
 }
@@ -40,11 +40,11 @@
     .filament{
         background-color: orange;
         position: absolute;
-        height: 1px;
+        height: 2px;
         width: 48px;
         z-index: 1;
         right: 148px;
-        top: 342px;
+        top: 341px;
         box-shadow: 1px 5px 25px 10px orange;
         display: none;
     }

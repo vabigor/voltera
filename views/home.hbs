@@ -7,19 +7,25 @@
         <div class="carousel-item active">
             <img src={{#url "carousel/1.jpg"}}{{/url}} class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h1><kbd>ПОЗАБОТЬТЕСЬ О СВОИХ ЛЮБИМЫХ,</kbd></h1>
-                <h1><kbd>А ОБ ОСВЕЩЕНИИ ПОЗАБОТИМСЯ МЫ</kbd></h1>
-                <p></p>
+                <h1><kbd>ОТ ПРОЕКТИРОВАНИЯ ДО ОБСЛУЖИВАНИЯ</kbd></h1>
+                <h1><kbd>ГОТОВЫ БЫТЬ С ВАМИ</kbd></h1>
             </div>
         </div>
         <div class="carousel-item">
             <img src={{#url "carousel/2.jpg"}}{{/url}} class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h1><kbd>ИНОГДА НЕДОСТАТОЧНО ТОЛЬКО ЛУННОГО СВЕТА</kbd></h1>
+                <h1><kbd>ПОЗАБОТЬТЕСЬ О СВОИХ ЛЮБИМЫХ,</kbd></h1>
+                <h1><kbd>А ОБ ОСВЕЩЕНИИ ПОЗАБОТИМСЯ МЫ</kbd></h1>
             </div>
         </div>
         <div class="carousel-item">
             <img src={{#url "carousel/3.jpg"}}{{/url}} class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1><kbd>ИНОГДА НЕДОСТАТОЧНО ТОЛЬКО ЛУННОГО СВЕТА</kbd></h1>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src={{#url "carousel/4.jpg"}}{{/url}} class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <h1><kbd>ВРАЩАЕМ НЕ ТОЛЬКО ЗЕМЛЮ</kbd></h1>
             </div>
@@ -48,7 +54,7 @@
         </div>
         <div class="col text-center">
             <img src={{#url "home/arrival.png"}}{{/url}} alt="...">
-            <span>Своевременное прибытие на объект</span>
+            <span>Своевременные сроки выполнения</span>
         </div>
         <div class="col text-center">
             <img src={{#url "home/quality.png"}}{{/url}} alt="...">
@@ -112,7 +118,7 @@
                     <div class="row g-0">
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">{{this.dataValues.name}}</h5>
+                                <h5 class="card-title">{{this.dataValues.full}}</h5>
                                 <p class="card-text">{{this.dataValues.text}}</p>
                                 <p class="card-text"><small class="text-muted">{{this.dataValues.updatedAt}}</small></p>
                             </div>
@@ -156,7 +162,7 @@
                 <label class="form-label color-gary" for="commentPost">Должность:</label>
                 <input type="text" class="form-control" id="commentPost">
                 <label class="form-label color-gary" for="commentCompany">Компания</label>
-                <input type="text" class="form-control" id="commentPhone">
+                <input type="text" class="form-control" id="commentCompany">
                 <label class="form-label color-gary" for="comment">Отзыв:<span class="color-red"> *</span></label>
                 <textarea id="comment" rows="5" class="form-control" aria-label="With textarea"></textarea>
             </div>

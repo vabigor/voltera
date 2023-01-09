@@ -62,3 +62,7 @@
 .color-red{
     color: red;
 }
+
+.size-content{
+    min-height: calc(100vh - 313px);
+}
