@@ -16,3 +16,15 @@
 .certificates-card{
     width: 18rem;
 }
+
+.certificate-size {
+    width: 780px;
+    height: 1000px;
+}
+
+@media (max-width: 991px) {
+    .certificate-size{
+        width: 480px;
+        height: 750px;
+    }
+}
