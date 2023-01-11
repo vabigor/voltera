@@ -2,7 +2,7 @@ const sequelize = require('../db')
 const {DataTypes, Sequelize} = require('sequelize')
 
 const Comment = sequelize.define('comment', {
-    id: {type: DataTypes.UUID, defaultValue: Sequelize.UUIDV4, primaryKey: true},
+    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
     name: {type: DataTypes.STRING, allowNull: false},
     post: {type: DataTypes.STRING, allowNull: true},
     company: {type: DataTypes.STRING, allowNull: true},
