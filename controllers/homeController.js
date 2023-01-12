@@ -1,9 +1,10 @@
-const commentService = require("../service/commentService");
+// const commentService = require("../service/commentService");
 
 class HomeController {
 
     async get(req, res){
-        await commentService.getAll(req, res, true);
+        // await commentService.getAll(req, res, true);
+        res.json({ASD:"123"})
     }
 }
 
