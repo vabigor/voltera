@@ -9,7 +9,7 @@ async function sendComment(){
         comment.post = commentPost.value;
         comment.company = commentCompany.value;
         comment.text = commentText.value;
-        let result = await axios.post(`${env.URL + ":" + env.PORT}/comment`, comment).then(r => {
+        let result = await axios.post(`${env.URL}/comment`, comment).then(r => {
             let parent = document.getElementById("selfComment");
             parent.innerHTML = createElemComment(r.data);
             commentText.value = "";
@@ -21,7 +21,7 @@ async function sendComment(){
 }
 
 async function getComments(elem, page){
-    let comments = await axios.get(`${env.URL+":"+env.PORT}/comment/`+page).then(result=>{
+    let comments = await axios.get(`${env.URL}/comment/`+page).then(result=>{
         let html = "";
         result.data.rows.forEach(r=>{
             html += createElemComment(r);
