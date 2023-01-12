@@ -47,10 +47,7 @@ const app = express()
 
 app.use(cors())
 app.use(express.json())
-// app.use('/', router)
-app.get('/', function (req, res) {
-    res.json({ASD:"asdas12"})
-})
+app.use('/', router)
 
 app.use(express.static(path.join(__dirname, 'static')))
 // app.use(express.json()) *
