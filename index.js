@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const expressHbs = require("express-handlebars");
 const hbs = require("hbs");
-// const sequelize = require('./db')
+const sequelize = require('./db')
 const cors = require('cors')
 const router = require('./routes/index')
 const path = require("path");
@@ -59,8 +59,8 @@ app.use(express.static(path.join(__dirname, 'static')))
 
 const start = async () => {
     try {
-        // await sequelize.authenticate()
-        // await sequelize.sync()
+        await sequelize.authenticate()
+        await sequelize.sync()
 
         app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
     }catch (e){
