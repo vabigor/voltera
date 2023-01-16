@@ -28,6 +28,26 @@
 
 @media (max-width: 1400px) {
     .video-home{
+        height: 950px;
+    }
+}
+@media (max-width: 1200px) {
+    .video-home{
+        height: 1100px;
+    }
+}
+@media (max-width: 990px) {
+    .video-home{
+        height: 1230px;
+    }
+}
+@media (max-width: 770px) {
+    .video-home{
+        height: 1440px;
+    }
+}
+@media (max-width: 555px) {
+    .video-home{
         display: none;
     }
 }
