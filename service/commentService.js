@@ -2,7 +2,7 @@ const {Comment} = require("../models/models");
 
 class CommentService{
 
-    async getAll(req, res, resView){
+    async getAll(req, res, callback){
         let page = 0;
         if (typeof req.params['page'] !== "undefined") {
             page = req.params.page
@@ -18,7 +18,7 @@ class CommentService{
                 this.formatCommentDate(res, req, r)
                 this.formatCommentFullName(r)
             })
-            resView?this.responseView(res, result):res.json(result)
+            callback(result, res);
         });
     }
 
@@ -46,17 +46,6 @@ class CommentService{
             }
         }
         data.dataValues.full = data.dataValues.full.slice(0, data.dataValues.full.length-2)
-    }
-
-    responseView(res, data){
-        let countPage = Math.trunc(data.count/5);
-        countPage = data.count%5!==0 ? countPage+1 : countPage;
-        res.render("home.hbs", {
-            title: "ВольтЭра",
-            head: "ВольтЭра",
-            comments: data.rows,
-            countPage: countPage
-        });
     }
 
 }
