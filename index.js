@@ -8,7 +8,7 @@ const router = require('./routes/index')
 const path = require("path");
 const Handlebars = require("handlebars");
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT
 
 const app = express()
 
@@ -39,19 +39,23 @@ Handlebars.registerHelper("inc", function(value) {
     return parseInt(x) + 1;
 });
 Handlebars.registerHelper("url", function(value) {
-    if (value[0]==="/"){
-        value.slice(1,1)
-    }
-    return process.env.URL+":"+process.env.PORT+"/"+value
+    return process.env.LOCAL==='true' ? process.env.LOCAL_URL+"/"+value : process.env.URL+"/"+value
 });
+// Handlebars.registerHelper("url", function(value) {
+//     if (value[0]==="/"){
+//         value.slice(1,1)
+//     }
+//     return process.env.URL+":"+process.env.PORT+"/"+value
+// });
 
 app.use(cors())
 app.use(express.json())
 app.use('/', router)
 
+// app.use(express.static('static'))
 app.use(express.static(path.join(__dirname, 'static')))
-// app.use(express.json())
-// app.use(express.static(path.resolve(__dirname, 'static')))
+// app.use(express.json()) *
+// app.use(express.static(path.resolve(__dirname, 'static'))) *
 
 const start = async () => {
     try {

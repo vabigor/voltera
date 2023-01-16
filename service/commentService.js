@@ -15,26 +15,26 @@ class CommentService{
 
         }).then(result=>{
             result.rows.forEach(r=>{
-                this.#formatCommentDate(res, req, r)
-                this.#formatCommentFullName(r)
+                this.formatCommentDate(res, req, r)
+                this.formatCommentFullName(r)
             })
-            resView?this.#responseView(res, result):res.json(result)
+            resView?this.responseView(res, result):res.json(result)
         });
     }
 
     async create(req, res){
         const body = req.body
         const comment = await Comment.create(body)
-        this.#formatCommentDate(res, req, comment);
-        this.#formatCommentFullName(comment)
+        this.formatCommentDate(res, req, comment);
+        this.formatCommentFullName(comment)
         return res.json(comment)
     }
 
-    #formatCommentDate(res, req, data){
+    formatCommentDate(res, req, data){
         data.dataValues.updatedAt = data.dataValues.updatedAt.toLocaleDateString()+' '+data.dataValues.updatedAt.toLocaleTimeString();
     }
 
-    #formatCommentFullName(data){
+    formatCommentFullName(data){
         let val = [];
         val.push(data.dataValues.company);
         val.push(data.dataValues.post);
@@ -48,7 +48,7 @@ class CommentService{
         data.dataValues.full = data.dataValues.full.slice(0, data.dataValues.full.length-2)
     }
 
-    #responseView(res, data){
+    responseView(res, data){
         let countPage = Math.trunc(data.count/5);
         countPage = data.count%5!==0 ? countPage+1 : countPage;
         res.render("home.hbs", {
