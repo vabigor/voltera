@@ -1,4 +1,5 @@
-let env = {
-    URL: "http://voltera.by/",
-    PORT: "80"
+let getUrl = ()=>{
+    return LOCAL ? "http://127.0.0.1" : "http://voltera.by"
 }
+
+let LOCAL = false;

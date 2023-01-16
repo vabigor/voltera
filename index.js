@@ -8,7 +8,7 @@ const router = require('./routes/index')
 const path = require("path");
 const Handlebars = require("handlebars");
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT
 
 const app = express()
 
@@ -39,7 +39,7 @@ Handlebars.registerHelper("inc", function(value) {
     return parseInt(x) + 1;
 });
 Handlebars.registerHelper("url", function(value) {
-    return process.env.URL+"/"+value
+    return process.env.LOCAL==='true' ? process.env.LOCAL_URL+"/"+value : process.env.URL+"/"+value
 });
 // Handlebars.registerHelper("url", function(value) {
 //     if (value[0]==="/"){
