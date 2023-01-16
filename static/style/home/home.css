@@ -17,3 +17,17 @@
 .line-4{
     border-radius: 100% 0 0 100%; border: solid 5px gray; height: 1px; box-shadow: 10px 10px 10px 0 rgba(0,0,0,0.5); margin-top: 30px
 }
+
+.video-home{
+    opacity: 0.1;
+    position: absolute;
+    object-fit: initial;
+    height: 850px;
+    width: 100%;
+}
+
+@media (max-width: 1400px) {
+    .video-home{
+        display: none;
+    }
+}

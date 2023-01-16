@@ -65,6 +65,11 @@
 
 <div>
     <div class="line-1"></div>
+
+    <video class="video-home" autoplay loop muted>
+        <source src={{#url "energy.mp4"}}{{/url}} type="video/mp4">
+    </video>
+
     <div class="container pt-2 pb-2">
         <h2><kbd>О НАС</kbd></h2>
     </div>
@@ -110,17 +115,17 @@
         <div>
             <div id="allComment">
                 {{#each comments}}
-                <div class="card mb-2">
-                    <div class="row g-0">
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{{this.dataValues.full}}</h5>
-                                <p class="card-text">{{this.dataValues.text}}</p>
-                                <p class="card-text"><small class="text-muted">{{this.dataValues.updatedAt}}</small></p>
+                    <div class="card mb-2">
+                        <div class="row g-0">
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{this.dataValues.full}}</h5>
+                                    <p class="card-text">{{this.dataValues.text}}</p>
+                                    <p class="card-text"><small class="text-muted">{{this.dataValues.updatedAt}}</small></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 {{/each}}
             </div>
             <div id="selfComment">
@@ -141,6 +146,7 @@
             </div>
         </div>
     </div>
+
 </div>
 
 <!-- Modal -->
