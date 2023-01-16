@@ -66,3 +66,7 @@
 .size-content{
     min-height: calc(100vh - 313px);
 }
+
+.text-bold{
+    font-weight: bold;
+}

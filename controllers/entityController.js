@@ -2,7 +2,7 @@ class EntityController {
 
     async project(req, res){
         res.render("entity/project.hbs", {
-            title: "Проектирование"
+            title: "Помощь в проектировании"
         });
     }
 
