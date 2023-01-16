@@ -8,7 +8,6 @@ class HomeController {
             countPage = data.count%5!==0 ? countPage+1 : countPage;
             res.render("home.hbs", {
                 title: "ВольтЭра",
-                head: "ВольтЭра",
                 comments: data.rows,
                 countPage: countPage
             });
