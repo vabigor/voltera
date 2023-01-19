@@ -2,8 +2,28 @@
     cursor: pointer;
 }
 
+.mt-8{
+    margin-top: 8px;
+}
+
+.mt-5{
+    margin-top: 5px;
+}
+
 .mt--15{
     margin-top: -15px;
+}
+
+.mb-8{
+    margin-bottom: 8px;
+}
+
+.mb-15{
+    margin-bottom: 15px;
+}
+
+.mb-35{
+    margin-bottom: 35px;
 }
 
 .a-custom{
@@ -16,10 +36,6 @@
 
 .text-align-left{
     text-align: left;
-}
-
-.mt-8{
-    margin-top: 8px;
 }
 
 .z-index-1{
@@ -36,14 +52,6 @@
 
 .custom-gray{
     background-color: rgb(244,244,244);
-}
-
-.mb-8{
-    margin-bottom: 8px;
-}
-
-.mt-5{
-    margin-top: 5px;
 }
 
 .bran-color{
