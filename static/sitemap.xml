@@ -4,48 +4,70 @@
         <loc>http://www.voltera.by/</loc>
         <lastmod>2023-01-17</lastmod>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.voltera.by/object</loc>
+        <lastmod>2023-01-23</lastmod>
+        <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>http://www.voltera.by/entity/project</loc>
         <lastmod>2023-01-17</lastmod>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
     </url>
     <url>
         <loc>http://www.voltera.by/entity/budgeting</loc>
         <lastmod>2023-01-17</lastmod>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
     </url>
     <url>
         <loc>http://www.voltera.by/entity/electric-installation-work</loc>
         <lastmod>2023-01-17</lastmod>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
     </url>
     <url>
         <loc>http://www.voltera.by/entity/electrophysical-measurements</loc>
         <lastmod>2023-01-17</lastmod>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
     </url>
     <url>
         <loc>http://www.voltera.by/entity/operative-maintenance</loc>
         <lastmod>2023-01-17</lastmod>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
     </url>
     <url>
         <loc>http://www.voltera.by/entity/post-warranty-service</loc>
         <lastmod>2023-01-17</lastmod>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
     </url>
     <url>
         <loc>http://www.voltera.by/entity/certificates</loc>
         <lastmod>2023-01-17</lastmod>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.voltera.by/individual/project</loc>
+        <lastmod>2023-01-23</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>http://www.voltera.by/individual/electrophysical-measurements</loc>
+        <lastmod>2023-01-23</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>http://www.voltera.by/individual/wiring</loc>
+        <lastmod>2023-01-23</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>http://www.voltera.by/individual/network-connection</loc>
+        <lastmod>2023-01-23</lastmod>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>http://www.voltera.by/individual/accompaniment</loc>
+        <lastmod>2023-01-23</lastmod>
+        <changefreq>daily</changefreq>
     </url>
 </urlset>
