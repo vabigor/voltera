@@ -23,12 +23,6 @@ class IndividualController {
             title: "Подключение жилых домов к сети электро снабжения"
         });
     }
-
-    async accompaniment(req, res){
-        res.render("individual/accompaniment.hbs", {
-            title: "Сопровождение"
-        });
-    }
 }
 
 module.exports = new IndividualController()

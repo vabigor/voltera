@@ -6,6 +6,5 @@ router.get('/project', individualController.project)
 router.get('/electrophysical-measurements', individualController.electrophysicalMeasurements)
 router.get('/wiring', individualController.wiring)
 router.get('/network-connection', individualController.networkConnection)
-router.get('/accompaniment', individualController.accompaniment)
 
 module.exports = router
