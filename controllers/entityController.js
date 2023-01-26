@@ -2,43 +2,50 @@ class EntityController {
 
     async project(req, res){
         res.render("entity/project.hbs", {
-            title: "Помощь в проектировании"
+            title: "Помощь в проектировании",
+            description: "Помощь в проектировании",
         });
     }
 
     async budgeting(req, res){
         res.render("entity/budgeting.hbs", {
-            title: "Составление смет"
+            title: "Составление смет",
+            description: "Составление смет",
         });
     }
 
     async electricInstallationWork(req, res){
         res.render("entity/electric_installation_work.hbs", {
-            title: "Электромонтажные работы любой сложности"
+            title: "Электромонтажные работы любой сложности",
+            description: "Электромонтажные работы любой сложности",
         });
     }
 
     async electrophysicalMeasurements(req, res){
         res.render("entity/electrophysical_measurements.hbs", {
-            title: "Электрофизические измерения"
+            title: "Электрофизические измерения",
+            description: "Электрофизические измерения",
         });
     }
 
     async operativeMaintenance(req, res){
         res.render("entity/operative_maintenance.hbs", {
-            title: "Оперативно техническое обслуживание"
+            title: "Оперативно техническое обслуживание",
+            description: "Оперативно техническое обслуживание",
         });
     }
 
     async postWarrantyService(req, res){
         res.render("entity/post_warranty_service.hbs", {
-            title: "Послегарантийное обслуживание и текущий ремонт электроустановок"
+            title: "Послегарантийное обслуживание и текущий ремонт электроустановок",
+            description: "Послегарантийное обслуживание и текущий ремонт электроустановок",
         });
     }
 
     async certificates(req, res){
         res.render("entity/certificates.hbs", {
-            title: "Сертификаты"
+            title: "Сертификаты",
+            description: "Сертификаты voltera.by",
         });
     }
 }
