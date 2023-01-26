@@ -2,15 +2,15 @@ class IndividualController {
 
     async project(req, res){
         res.render("individual/project.hbs", {
-            title: "Помощь в проектировании",
-            description: "Помощь в проектировании",
+            title: "Помощь в проектировании для физических лиц",
+            description: "Помощь в проектировании для физических лиц",
         });
     }
 
     async electrophysicalMeasurements(req, res){
         res.render("individual/electrophysical_measurements.hbs", {
-            title: "Электрофизические измерения",
-            description: "Электрофизические измерения",
+            title: "Электрофизические измерения для физических лиц",
+            description: "Электрофизические измерения для физических лиц",
         });
     }
 

@@ -2,8 +2,8 @@ class EntityController {
 
     async project(req, res){
         res.render("entity/project.hbs", {
-            title: "Помощь в проектировании",
-            description: "Помощь в проектировании",
+            title: "Помощь в проектировании для юридических лиц",
+            description: "Помощь в проектировании для юридических лиц",
         });
     }
 
@@ -23,8 +23,8 @@ class EntityController {
 
     async electrophysicalMeasurements(req, res){
         res.render("entity/electrophysical_measurements.hbs", {
-            title: "Электрофизические измерения",
-            description: "Электрофизические измерения",
+            title: "Электрофизические измерения для юридических лиц",
+            description: "Электрофизические измерения для юридических лиц",
         });
     }
 
