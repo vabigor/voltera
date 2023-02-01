@@ -6,6 +6,10 @@
     margin-top: 8px;
 }
 
+.mt-14{
+    margin-top: 14px;
+}
+
 .mt-5{
     margin-top: 5px;
 }
@@ -72,9 +76,25 @@
 }
 
 .size-content{
-    min-height: calc(100vh - 313px);
+    min-height: calc(100vh - 316px);
 }
 
 .text-bold{
     font-weight: bold;
+}
+
+.font-size-16{
+    font-size: 16pt
+}
+
+.font-size-26{
+    font-size: 26pt;
+}
+
+.font-weight-6{
+    font-weight: 600
+}
+
+.mix-blend-mode-multiply{
+    mix-blend-mode: multiply;
 }
