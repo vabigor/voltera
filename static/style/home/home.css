@@ -22,7 +22,7 @@
     opacity: 0.1;
     position: absolute;
     object-fit: initial;
-    height: 925px;
+    height: 1285px;
     width: 100%;
 }
 
@@ -32,25 +32,25 @@
 
 @media (max-width: 1400px) {
     .video-home{
-        height: 1020px;
+        height: 1355px;
     }
 }
 @media (max-width: 1200px) {
     .video-home{
-        height: 1165px;
+        height: 1475px;
     }
 }
 @media (max-width: 990px) {
     .video-home{
-        height: 1300px;
+        height: 1660px;
     }
 }
 @media (max-width: 770px) {
     .video-home{
-        height: 1510px;
+        height: 1915px;
     }
 }
-@media (max-width: 555px) {
+@media (max-width: 580px) {
     .video-home{
         display: none;
     }
